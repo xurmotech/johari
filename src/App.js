@@ -1,5 +1,5 @@
 import './App.css';
-import LoginPage from './pages/login';
+import LoginPage from './pages/login/login';
 
 //import logo from './logo.svg';
 function App() {

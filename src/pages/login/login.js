@@ -1,7 +1,7 @@
 import React from 'react';
 import { Form, Input, Button } from 'antd';
 import './login.css'; 
-import tvsLogo from '../assets/TVS_Motor_logo.png';
+import tvsLogo from '../../assets/TVS_Motor_logo.png';
 
 const Login = () => {
   const onFinish = (values) => {

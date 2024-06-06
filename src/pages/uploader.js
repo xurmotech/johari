@@ -4,7 +4,7 @@ export default function uploader() {
     console.log("iun upload")
   return (
     <div>
-        <h1>Uploaderiuygfdx</h1>
+        <h3>Uploader Data</h3>
       
     </div>
   )

@@ -6,10 +6,11 @@ import { router } from './routes'
 //import logo from './logo.svg';
 function App() {
   return (
-    <div className="">      
+    <div className="">   
       <RouterProvider router={router} />
     </div>
   );
 }
 
 export default App;
+

@@ -1,6 +1,6 @@
 .header {
         background-color: #fff;
-      }
+              }
       
 .header-row {
         border-bottom: 4px solid;
@@ -32,4 +32,19 @@
         border: none;
         box-shadow: none;
       }
+      .tabs-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+      }
       
+      .tabs-container .ant-tabs {
+        width: 100%;
+      }
+
+      
+      /* .tabs-container .ant-tabs-tab {
+        flex-grow: 1
+        text-align: center;
+      } */

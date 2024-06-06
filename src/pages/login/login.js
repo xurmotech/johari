@@ -2,10 +2,18 @@ import React from 'react';
 import { Form, Input, Button } from 'antd';
 import './login.css'; 
 import tvsLogo from '../../assets/TVS_Motor_logo.png';
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../../components/authContext';
 
 const Login = () => {
+
+  const { login } = useAuth();
+  const navigate = useNavigate();
+
   const onFinish = (values) => {
     console.log('Success:', values);
+    login();
+    navigate('/uploader');
   };
 
   const onFinishFailed = (errorInfo) => {

@@ -1,0 +1,50 @@
+.header {
+        background-color: #fff;
+              }
+      
+.header-row {
+        border-bottom: 4px solid;
+        border-image: linear-gradient(to right, #1E3D88, #ff0000) 1;
+      }
+      
+.header-title {
+        margin: 0;
+        color: #1E3D88;
+        text-align: center;
+      }
+      
+.header-user {
+        display: flex;
+        align-items: center;
+      }
+      
+.header-user-name {
+        margin-right: 10px;
+        font-size: 16px;
+      }
+      
+.header-logo {
+        width: 100px;
+        margin-right: 200px;
+      }
+      
+.header-button {
+        border: none;
+        box-shadow: none;
+      }
+      .tabs-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+      }
+      
+      .tabs-container .ant-tabs {
+        width: 100%;
+      }
+
+      
+      /* .tabs-container .ant-tabs-tab {
+        flex-grow: 1
+        text-align: center;
+      } */

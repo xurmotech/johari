@@ -45,7 +45,7 @@
       }
 
       :where(.css-dev-only-do-not-override-3rel02).ant-tabs-card.ant-tabs-top >.ant-tabs-nav .ant-tabs-tab{
-        padding: 0.5vw 2vw ;
+        padding: 0.5vw 6vw;
         font-size:small;
       }     
       :where(.css-dev-only-do-not-override-3rel02).ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn{

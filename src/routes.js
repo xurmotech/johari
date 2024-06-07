@@ -1,7 +1,7 @@
 
 import { createBrowserRouter } from 'react-router-dom'
 import Login from './pages/login/login'
-import Uploader from './pages/uploader'
+import Uploader from './pages/upload/upload'
 import LayoutWithHeader from './components/layoutWithHeader'
 import LayoutWithoutHeader from './components/layoutWithoutHeader'
 import ProtectedRoute from './components/protectedRoutes';

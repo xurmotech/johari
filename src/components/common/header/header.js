@@ -56,13 +56,13 @@ return(
   <div className='tabs-container'>
   <Row >
     <Tabs defaultActiveKey="1" type="card">
-      <TabPane tab="Uploader" key="1">
+      <TabPane tab="Upload" key="1">
         <Uploader />
       </TabPane>
       <TabPane tab="Status" key="2">
         {/* Content for Status tab */}
       </TabPane>
-      <TabPane tab="Townwise" key="3">
+      <TabPane tab="Report" key="3">
         {/* Content for Townwise tab */}
       </TabPane>
       <TabPane tab="Johari" key="4">

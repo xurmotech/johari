@@ -3,8 +3,8 @@
               }
       
 .header-row {
-        border-bottom: 4px solid;
-        border-image: linear-gradient(to right, #1E3D88, #ff0000) 1;
+        border-bottom: 4.7px solid;
+        border-image: linear-gradient(90deg, rgba(213,241,255,1) 0%, rgba(37,41,168,1) 21%, rgba(29,32,164,1) 49%, rgba(255,0,0,1) 51%) 1;
       }
       
 .header-title {
@@ -43,8 +43,16 @@
         width: 100%;
       }
 
-      
-      /* .tabs-container .ant-tabs-tab {
-        flex-grow: 1
-        text-align: center;
-      } */
+      :where(.css-dev-only-do-not-override-3rel02).ant-tabs-card.ant-tabs-top >.ant-tabs-nav .ant-tabs-tab{
+        padding: 0.5vw 2vw ;
+        font-size:small;
+      }     
+      :where(.css-dev-only-do-not-override-3rel02).ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn{
+        font-weight: 500 ;
+      } 
+      :where(.css-dev-only-do-not-override-3rel02).ant-tabs-card >.ant-tabs-nav .ant-tabs-tab{
+        border: 1px solid #d6d6d6;
+      }
+      :where(.css-dev-only-do-not-override-3rel02).ant-tabs >.ant-tabs-nav .ant-tabs-nav-operations-hidden{
+        position: static;
+      }

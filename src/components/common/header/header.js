@@ -1,12 +1,11 @@
 import React from 'react';
-import { Layout, Typography, Dropdown, Button, Row, Col, Space, Menu, Tabs  } from 'antd';
+import { Typography, Dropdown, Button, Row, Col, Space, Menu, Tabs  } from 'antd';
 import { DownOutlined } from '@ant-design/icons';
 import tvsLogo from '../../../assets/TVS_Motor_logo.png'; 
 import './header.css'; 
 import { useAuth } from '../../authContext';
 import Uploader from '../../../pages/uploader'
 
-const { Header } = Layout;
 const { Title } = Typography;
 const { TabPane } = Tabs;
 
@@ -30,11 +29,11 @@ return(
   <>
   <div className="header">
     <Row justify="space-between" align="middle" className="header-row">
-      {/* <Col flex="none"> </Col> */}
-      <Col flex="auto">
+      <Col span={8} flex="auto"> </Col>
+      <Col span={8} flex="auto">
         <Title level={3} className="header-title">Townwise Data Automation</Title>
       </Col>
-      <Col className="header-user" flex="none">
+      <Col span={8} className="header-user" flex="none">
         <span className="header-user-name">John Doe</span>
         <Dropdown overlay={<Menu onClick={handleMenuClick} items={items} />}  trigger={['click']}>
           <Space>
@@ -43,12 +42,8 @@ return(
             </Button>
           </Space>
         </Dropdown>
-      </Col>
-      {/* <Col flex="none"> </Col> */}
-      <Col className="header-user" flex="none">
         <img src={tvsLogo} alt="TVS Logo" className="header-logo" />
       </Col>
-      <Col flex="none"> </Col>
     </Row>
     <br/><br/>
    

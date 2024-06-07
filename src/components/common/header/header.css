@@ -1,5 +1,6 @@
 .header {
         background-color: #fff;
+        margin: 25px;
               }
       
 .header-row {
@@ -8,7 +9,7 @@
       }
       
 .header-title {
-        margin: 0;
+        margin-right: 10px;
         color: #1E3D88;
         text-align: center;
       }
@@ -19,18 +20,18 @@
       }
       
 .header-user-name {
-        margin-right: 10px;
         font-size: 16px;
       }
       
 .header-logo {
-        width: 100px;
-        margin-right: 200px;
+        width: 175px;
+        margin-right: 150px;
       }
       
 .header-button {
         border: none;
         box-shadow: none;
+        padding: 2px 8px;
       }
       .tabs-container {
         display: flex;

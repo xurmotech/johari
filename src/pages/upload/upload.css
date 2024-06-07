@@ -8,4 +8,30 @@
       .step-container:last-child {
         border-bottom: none;
       }
+
+      .help-button{
+       background-color: #979797;
+       margin-left: 10px;
+      }
+
+      .upload-button{
+        background-color: #1E3D88;
+        margin-left: 10px;
+        color : white;
+      }
+
+
+      .help-container {
+        text-align: left;
+      }
       
+      .help-text {
+        display: block;
+        margin-bottom: 8px;
+      }
+      
+      .last-updated {
+        margin-top: 16px;
+        display: block;
+        margin-bottom: 8px;
+      }

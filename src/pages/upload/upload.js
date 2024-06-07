@@ -1,9 +1,8 @@
 import React from 'react';
-import { Form, Row, Col, Typography } from 'antd';
+import { Form, Row, Col, Button, Typography } from 'antd';
 import './upload.css';
 import MonthDropdown from '../../components/common/dropdowns/monthselect';
 import CountryDropdown from '../../components/common/dropdowns/countryselect';
-import CustomButton from '../../components/common/button';
 
 const { Title } = Typography;
 
@@ -32,19 +31,37 @@ const Upload = () => {
         <div className="step-container">
           <Form >
             <Form.Item label="Step 1:">
-              <Row gutter = {16}>
-                <Col span= {8}>
-                <CustomButton
+              <Row gutter={[30,16]}>
+                <Col span= {6}>
+                <Button
                   label="Upload"
                   onClick={() => { document.getElementById('file-input').click(); }}
-                />
+                  className="upload-button"
+                >
+                  Upload
+                </Button>
                   <input id="file-input" type="file" accept="application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" style={{ display: 'none' }} onChange={handleUpload} />
                 </Col>
-                <Col span= {8}>
+                <Col span= {6}>
                   <MonthDropdown /> 
                 </Col>
-                <Col span= {8}>
+                <Col span= {6}>
                   <CountryDropdown name="area" label="Area" rules={[{ required: true, message: 'Please select an area' }]} />
+                </Col>
+                <Col span={6} className="help-container">
+                  <div>
+                    <span className="help-text">Help:
+                    <Button
+                      onClick={() => { console.log('Download Template'); }}
+                      className="help-button"
+                    >
+                      Download Template
+                    </Button>
+                    </span>
+                  </div>
+                  <div className="last-updated">
+                    <span>Last updated: Dec 2023</span>
+                  </div>
                 </Col>
               </Row>
             </Form.Item>  
@@ -53,21 +70,25 @@ const Upload = () => {
       <div className="step-container">
         <Form>
           <Form.Item label="Step 2">
-            <CustomButton
+            <Button
               label="Validate"
               onClick={handleValidation}
               disabled
-            />
+            >
+              Validate
+            </Button>
           </Form.Item>
         </Form>
       </div>
       <div className="step-container">
         <Form.Item label="Step 3">
-          <CustomButton
+          <Button
             label="Submit"
             onClick={handleSubmission}
             disabled
-          />
+          >
+            Submit
+          </Button>
         </Form.Item>
       </div>
     </div>

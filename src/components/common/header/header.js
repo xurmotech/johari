@@ -4,7 +4,7 @@ import { DownOutlined } from '@ant-design/icons';
 import tvsLogo from '../../../assets/TVS_Motor_logo.png'; 
 import './header.css'; 
 import { useAuth } from '../../authContext';
-import Uploader from '../../../pages/uploader'
+import Uploader from '../../../pages/upload/upload'
 
 const { Title } = Typography;
 const { TabPane } = Tabs;

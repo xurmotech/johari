@@ -1,6 +1,6 @@
 .header {
         background-color: #fff;
-        margin: 25px;
+        margin-top: 25px; 
               }
       
 .header-row {
@@ -31,7 +31,7 @@
 .header-button {
         border: none;
         box-shadow: none;
-        padding: 2px 8px;
+        padding: 2px 4px;
       }
       .tabs-container {
         display: flex;

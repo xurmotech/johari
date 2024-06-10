@@ -1,4 +1,6 @@
-
+      .upload-container {
+        padding: 20px;
+      }
       
       .step-container {
         padding: 20px 0;
@@ -8,19 +10,18 @@
       .step-container:last-child {
         border-bottom: none;
       }
-
-      .help-button{
-       background-color: #979797;
-       margin-left: 10px;
+      
+      .help-button {
+        background-color: #979797;
+        margin-left: 10px;
       }
-
-      .upload-button{
+      
+      .upload-button {
         background-color: #1E3D88;
         margin-left: 10px;
-        color : white;
+        color: white;
       }
-
-
+      
       .help-container {
         text-align: left;
       }
@@ -35,3 +36,14 @@
         display: block;
         margin-bottom: 8px;
       }
+      
+      @media (max-width: 576px) {
+        .title {
+          text-align: center;
+        }
+      
+        .help-container {
+          text-align: center;
+        }
+      }
+      

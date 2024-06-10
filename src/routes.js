@@ -1,7 +1,8 @@
 
 import { createBrowserRouter } from 'react-router-dom'
 import Login from './pages/login/login'
-import Uploader from './pages/upload/upload'
+import Upload from './pages/upload/upload'
+import Admin from './pages/admin/admin'
 import LayoutWithHeader from './components/layoutWithHeader'
 import LayoutWithoutHeader from './components/layoutWithoutHeader'
 import ProtectedRoute from './components/protectedRoutes';
@@ -20,10 +21,18 @@ export const router = createBrowserRouter([
         children: [
             { path: '/uploader',  element: (
                 <ProtectedRoute>
-                  <Uploader />
+                  <Upload />
                 </ProtectedRoute>
               ),
-        },        
+        }, 
+        { 
+            path: '/admin',  
+            element: (
+                <ProtectedRoute>
+                    <Admin />
+                </ProtectedRoute>
+            ),
+        },       
            
         ],
     },

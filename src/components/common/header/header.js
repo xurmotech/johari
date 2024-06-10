@@ -4,7 +4,8 @@ import { DownOutlined } from '@ant-design/icons';
 import tvsLogo from '../../../assets/TVS_Motor_logo.png'; 
 import './header.css'; 
 import { useAuth } from '../../authContext';
-import Uploader from '../../../pages/upload/upload'
+import Upload from '../../../pages/upload/upload'
+import Admin from '../../../pages/admin/admin'
 
 const { Title } = Typography;
 const { TabPane } = Tabs;
@@ -54,7 +55,7 @@ return (
         <Col span={24}>
           <Tabs defaultActiveKey="1" type="card" tabPosition="top" className="responsive-tabs">
             <TabPane tab="Upload" key="1">
-              <Uploader />
+              <Upload />
             </TabPane>
             <TabPane tab="Status" key="2">
               {/* Content for Status tab */}
@@ -66,7 +67,7 @@ return (
               {/* Content for Townwise tab */}
             </TabPane>
             <TabPane tab="Administration" key="5">
-              {/* Content for Administration tab */}
+              <Admin />
             </TabPane>
           </Tabs>
         </Col>

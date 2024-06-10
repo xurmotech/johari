@@ -1,7 +1,7 @@
 .header {
         background-color: #fff;
         margin-top: 25px; 
-              }
+        }
       
 .header-row {
         border-bottom: 4.7px solid;
@@ -17,15 +17,16 @@
 .header-user {
         display: flex;
         align-items: center;
+        flex: none;
       }
       
 .header-user-name {
-        font-size: 16px;
+        font-size: 17px;     
       }
       
 .header-logo {
         width: 175px;
-        margin-right: 150px;
+        /* margin-right: 150px; */
       }
       
 .header-button {
@@ -57,3 +58,74 @@
       :where(.css-dev-only-do-not-override-3rel02).ant-tabs >.ant-tabs-nav .ant-tabs-nav-operations-hidden{
         position: static;
       }
+
+    /* new */
+    /* .header {
+      padding: 10px;
+    } */
+    
+    .header-logo-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .header-title-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    
+    .header-user {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    
+    .header-logo {
+      /* width: 100px; */
+    }
+    
+    .header-user-name {
+      margin-right: 10px;
+    }
+    
+    .header-button {
+      border: none;
+      box-shadow: none;
+    }
+    
+    .tabs-container {
+      padding: 0 20px;
+    }
+    
+    .responsive-tabs .ant-tabs-nav-wrap {
+      display: flex;
+      justify-content: center;
+    }
+    
+    @media (max-width: 768px) {
+      .header-title-container {
+        margin-top: 10px;
+        justify-content: center;
+      align-items: center;
+      text-align: center;
+      }
+    
+      .header-user {
+        justify-content: center;
+        /* margin-top: 10px; */
+        flex: auto;
+      }
+    
+      .header-logo-container {
+        justify-content: center;
+        margin-top: 10px;
+      }
+    
+      .responsive-tabs .ant-tabs-nav-list {
+        flex-direction: column;
+      }
+    }
+    

@@ -1,0 +1,71 @@
+
+.tabs-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+      }
+      
+      .tabs-container .ant-tabs {
+        width: 100%;
+      }
+      
+      .ant-tabs-card.ant-tabs-top > .ant-tabs-nav .ant-tabs-tab {
+        padding: 0.5vw 2vw;
+        font-size: small;
+      }
+      
+      .ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+        font-weight: 500;
+      }
+      
+      .ant-tabs-card > .ant-tabs-nav .ant-tabs-tab {
+        border: 1px solid #d6d6d6;
+      }
+      
+      .ant-tabs > .ant-tabs-nav .ant-tabs-nav-operations-hidden {
+        position: static;
+      }
+      
+      .settings-container {
+        padding: 20px;
+      }
+      
+      .settings-section {
+        margin-bottom: 20px;
+      }
+      
+      .settings-section .section-title {
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      
+      .settings-section .button-group {
+        display: flex;
+        gap: 10px;
+      }
+      
+      .settings-section .button-group button {
+        flex: 1;
+      }
+      
+      .threshold-inputs {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      
+      .threshold-inputs input {
+        width: 60px;
+      }
+      
+      .upload-update-button {
+        background-color: #3B5998;
+        color: white;
+      }
+      
+      .download-button {
+        background-color: #1E3D88;
+        color: white;
+      }
+      

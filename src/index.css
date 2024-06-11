@@ -45,6 +45,12 @@ a:hover {
   color: #57b846;
 }
 
+.primary-button {
+  background-color: #1E3D88;
+  margin-left: 10px;
+  color: white;
+}
+
 /*---------------------------------------------*/
 h1,h2,h3,h4,h5,h6 {
   margin: 0px;

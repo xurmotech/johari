@@ -16,10 +16,11 @@
         margin-left: 10px;
       }
       
-      .upload-button {
-        background-color: #1E3D88;
-        margin-left: 10px;
-        color: white;
+     
+      
+      .filename{
+        font-size: small;
+        color: #1E3D88;
       }
       
       .help-container {

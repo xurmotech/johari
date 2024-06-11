@@ -6,6 +6,7 @@ import './header.css';
 import { useAuth } from '../../authContext';
 import Upload from '../../../pages/upload/upload'
 import Admin from '../../../pages/admin/admin'
+import Status from '../../../pages/status/status'
 
 const { Title } = Typography;
 const { TabPane } = Tabs;
@@ -58,7 +59,7 @@ return (
               <Upload />
             </TabPane>
             <TabPane tab="Status" key="2">
-              {/* Content for Status tab */}
+              <Status />
             </TabPane>
             <TabPane tab="Report" key="3">
               {/* Content for Townwise tab */}

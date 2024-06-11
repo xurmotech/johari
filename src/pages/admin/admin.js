@@ -1,8 +1,9 @@
 import React from 'react';
-import { Tabs, Row, Button, Input, Radio, Form } from 'antd';
+import { Tabs, Row, Col, Table, Select, Button, Input, Radio, Form } from 'antd';
 import './admin.css';
 
 const { TabPane } = Tabs;
+const { Option } = Select;
 
 const Admin = () => {
   const handleDownload = (type) => {
@@ -16,7 +17,7 @@ const Admin = () => {
   return (
     <div className="tabs-container">
       <Row>
-        <Tabs defaultActiveKey="1" type="card">
+        <Tabs defaultActiveKey="1">
           <TabPane tab="Settings" key="1">
             <div className="settings-container">
               <div className="settings-section">
@@ -101,7 +102,54 @@ const Admin = () => {
             </div>
           </TabPane>
           <TabPane tab="Manage Users" key="2">
-            <div>Manage Users Content</div>
+          <Row gutter={16}>
+                        <Col span={16}>
+                            <Table
+                                columns={[
+                                    {
+                                        title: 'Email Id',
+                                        dataIndex: 'email',
+                                        key: 'email',
+                                    },
+                                    {
+                                        title: 'User Role',
+                                        dataIndex: 'role',
+                                        key: 'role',
+                                    },
+                                    {
+                                        title: 'Area',
+                                        dataIndex: 'area',
+                                        key: 'area',
+                                    },
+                                    {
+                                        title: 'Date Added',
+                                        dataIndex: 'dateAdded',
+                                        key: 'dateAdded',
+                                    },
+                                ]}
+                                dataSource={[]}
+                                pagination={{ pageSize: 10 }}
+                            />
+                        </Col>
+                        <Col span={8}>
+                            <div className="add-user-form">
+                                <h3>Add / Modify Users</h3>
+                                <Input placeholder="Email" style={{ marginBottom: '16px' }} />
+                                <Select placeholder="Select Role" style={{ width: '100%', marginBottom: '16px' }}>
+                                    <Option value="HO User">HO User</Option>
+                                    <Option value="MIS User">MIS User</Option>
+                                    <Option value="Admin">Admin</Option>
+                                </Select>
+                                <Select placeholder="Area" style={{ width: '100%', marginBottom: '16px' }}>
+                                    <Option value="AP">AP</Option>
+                                    <Option value="BIH">BIH</Option>
+                                    <Option value="CHT">CHT</Option>
+                                    {/* Add more options as needed */}
+                                </Select>
+                                <Button type="primary" style={{ width: '100%' }}>Add</Button>
+                            </div>
+                        </Col>
+                    </Row>
           </TabPane>
           <TabPane tab="Usage Logs" key="3">
             <div>Usage Logs Content</div>

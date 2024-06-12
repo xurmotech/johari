@@ -6,6 +6,8 @@ const { TabPane } = Tabs;
 const { Option } = Select;
 
 const Admin = () => {
+  const [form] = Form.useForm();
+
   const handleDownload = (type) => {
     console.log(`Download ${type}`);
   };
@@ -13,6 +15,10 @@ const Admin = () => {
   const handleUploadAndUpdate = (type) => {
     console.log(`Upload and Update ${type}`);
   };
+
+  const onFinish = (values) => {
+    console.log('Form values:', values);
+  };  
 
   return (
     <div className="tabs-container">
@@ -103,53 +109,61 @@ const Admin = () => {
           </TabPane>
           <TabPane tab="Manage Users" key="2">
           <Row gutter={16}>
-                        <Col span={16}>
-                            <Table
-                                columns={[
-                                    {
-                                        title: 'Email Id',
-                                        dataIndex: 'email',
-                                        key: 'email',
-                                    },
-                                    {
-                                        title: 'User Role',
-                                        dataIndex: 'role',
-                                        key: 'role',
-                                    },
-                                    {
-                                        title: 'Area',
-                                        dataIndex: 'area',
-                                        key: 'area',
-                                    },
-                                    {
-                                        title: 'Date Added',
-                                        dataIndex: 'dateAdded',
-                                        key: 'dateAdded',
-                                    },
-                                ]}
-                                dataSource={[]}
-                                pagination={{ pageSize: 10 }}
-                            />
-                        </Col>
-                        <Col span={8}>
-                            <div className="add-user-form">
-                                <h3>Add / Modify Users</h3>
-                                <Input placeholder="Email" style={{ marginBottom: '16px' }} />
-                                <Select placeholder="Select Role" style={{ width: '100%', marginBottom: '16px' }}>
-                                    <Option value="HO User">HO User</Option>
-                                    <Option value="MIS User">MIS User</Option>
-                                    <Option value="Admin">Admin</Option>
-                                </Select>
-                                <Select placeholder="Area" style={{ width: '100%', marginBottom: '16px' }}>
-                                    <Option value="AP">AP</Option>
-                                    <Option value="BIH">BIH</Option>
-                                    <Option value="CHT">CHT</Option>
-                                    {/* Add more options as needed */}
-                                </Select>
-                                <Button type="primary" style={{ width: '100%' }}>Add</Button>
-                            </div>
-                        </Col>
-                    </Row>
+              <Col xs={24} md={16}>
+                  <Table
+                      columns={[
+                          { title: 'Email Id', dataIndex: 'email', key: 'email' },
+                          { title: 'User Role', dataIndex: 'role', key: 'role' },
+                          { title: 'Area', dataIndex: 'area', key: 'area' },
+                          { title: 'Date Added', dataIndex: 'dateAdded', key: 'dateAdded' },
+                      ]}
+                      dataSource={[]}
+                      pagination={{ pageSize: 10 }}
+                  />
+              </Col>
+              <Col xs={24} md={8}>
+                <div className="add-user-form">
+                    <h3>Add / Modify Users</h3>
+                    <Form form={form} onFinish={onFinish}>
+                        <Form.Item
+                            name="email"
+                            label="Email Id"
+                            rules={[{ required: true, message: 'Please input the email!' }]}
+                        >
+                            <Input className="input" placeholder="Email" />
+                        </Form.Item>
+                        <Form.Item
+                            name="role"
+                            label="Role"
+                            rules={[{ required: true, message: 'Please select the role!' }]}
+                        >
+                            <Select className="select" placeholder="Select Role">
+                                <Option value="HO User">HO User</Option>
+                                <Option value="MIS User">MIS User</Option>
+                                <Option value="Admin">Admin</Option>
+                            </Select>
+                        </Form.Item>
+                        <Form.Item
+                            name="area"
+                            label="Country"
+                            rules={[{ required: true, message: 'Please select the area!' }]}
+                        >
+                            <Select className="select" placeholder="Select Area">
+                                <Option value="AP">AP</Option>
+                                <Option value="BIH">BIH</Option>
+                                <Option value="CHT">CHT</Option>
+                                {/* Add more options as needed */}
+                            </Select>
+                        </Form.Item>
+                        <Form.Item>
+                            <Button type="primary" htmlType="submit" className="button">
+                                Add
+                            </Button>
+                        </Form.Item>
+                    </Form>
+                </div>
+            </Col>
+          </Row>
           </TabPane>
           <TabPane tab="Usage Logs" key="3">
             <div>Usage Logs Content</div>

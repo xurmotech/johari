@@ -7,6 +7,7 @@ import { useAuth } from '../../authContext';
 import Upload from '../../../pages/upload/upload'
 import Admin from '../../../pages/admin/admin'
 import Status from '../../../pages/status/status'
+import Townwise from '../../../pages/report/report';
 
 const { Title } = Typography;
 const { TabPane } = Tabs;
@@ -62,7 +63,7 @@ return (
               <Status />
             </TabPane>
             <TabPane tab="Report" key="3">
-              {/* Content for Townwise tab */}
+              <Townwise />
             </TabPane>
             <TabPane tab="Johari" key="4">
               {/* Content for Townwise tab */}

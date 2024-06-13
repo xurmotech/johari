@@ -1,0 +1,68 @@
+.approve-page {
+        padding: 20px;
+        background-color: #fff;
+        max-width: 1200px;
+        margin: 0 auto;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+      }
+      
+      .file-info {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      
+      .file-name {
+        font-weight: bold;
+        color : #1E3D88;
+      }
+      
+      .summary-view {
+        margin-top: 20px;
+        color : #1E3D88;
+      }
+      
+      footer {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      footer .ant-row {
+        width: 100%;
+      }
+      
+      footer .ant-row > .ant-col {
+        display: flex;
+        align-items: center;
+      }
+      
+      footer .ant-row > .ant-col:first-child {
+        justify-content: flex-start;
+      }
+      
+      footer .ant-row > .ant-col:last-child {
+        justify-content: flex-end;
+      }
+
+      .left-button {
+        display: flex;
+        justify-content: flex-start;
+      }
+      
+      .right-buttons {
+        display: flex;
+        justify-content: flex-end;
+      }
+      
+      @media (max-width: 768px) {
+        .left-button,
+        .right-buttons {
+          justify-content: center;
+          margin-bottom: 10px;
+        }
+      
+        .right-buttons .ant-row {
+          justify-content: center;
+        }
+      }

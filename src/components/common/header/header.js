@@ -5,6 +5,7 @@ import tvsLogo from '../../../assets/TVS_Motor_logo.png';
 import './header.css'; 
 import { useAuth } from '../../authContext';
 import Upload from '../../../pages/upload/upload'
+import Approve from '../../../pages/approve/approve'
 import Admin from '../../../pages/admin/admin'
 import Status from '../../../pages/status/status'
 import Townwise from '../../../pages/report/report';
@@ -59,16 +60,19 @@ return (
             <TabPane tab="Upload" key="1">
               <Upload />
             </TabPane>
-            <TabPane tab="Status" key="2">
+            <TabPane tab="Approve" key="2">
+              <Approve />
+            </TabPane>
+            <TabPane tab="Status" key="3">
               <Status />
             </TabPane>
-            <TabPane tab="Report" key="3">
+            <TabPane tab="Report" key="4">
               <Townwise />
             </TabPane>
-            <TabPane tab="Johari" key="4">
+            <TabPane tab="Johari" key="5">
               {/* Content for Townwise tab */}
             </TabPane>
-            <TabPane tab="Administration" key="5">
+            <TabPane tab="Administration" key="6">
               <Admin />
             </TabPane>
           </Tabs>

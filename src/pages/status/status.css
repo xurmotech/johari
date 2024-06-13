@@ -24,6 +24,32 @@
         color: #fff;
         background-color: #52c41a;
       }
+
+      .download-icon{
+        padding: 1vw;
+        margin-bottom: 0.4vw;
+      }
+      .center-align {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .download-container {
+        margin-bottom: 8px; /* Adjust as needed for spacing between download items */
+      }
+
+      .country-grid.grey {
+        width: 100px;
+        height: 50px;
+        text-align: center;
+        padding: 10px 0;
+        margin-bottom: 8px;
+        margin-right: 20px;
+        font-weight: bold;
+        color: black;
+        background-color: #A7A9AB;
+      }
       
       .legend-container {
         padding: 20px;
@@ -38,7 +64,8 @@
         display: flex;
         align-items: center;
         margin-bottom: 8px;
-        flex-wrap: wrap;
+        flex-wrap: inherit;
+        margin-right: 1vw;
       }
       
       .legend-color {
@@ -60,7 +87,12 @@
       .legend-color.red {
         background-color: #f5222d;
       }
-      
+      .ant-modal .ant-modal-content {
+        text-align: center;
+      }
+      .ant-modal .ant-modal-footer{
+        text-align: center;
+      }
       @media (max-width: 768px) {
         .legend-container {
           padding: 15px;

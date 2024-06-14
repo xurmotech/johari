@@ -1,9 +1,10 @@
 import React from 'react';
-import { Tabs, Row, Col, Table, Select, Button, Input, Radio, Form } from 'antd';
+import { Tabs, Row, Col, Table, Select, Button, Input, DatePicker, Radio, Form } from 'antd';
 import './admin.css';
 
 const { TabPane } = Tabs;
 const { Option } = Select;
+const { RangePicker } = DatePicker;
 
 const Admin = () => {
   const [form] = Form.useForm();
@@ -167,15 +168,37 @@ const Admin = () => {
             </Row>
           </TabPane>
           <TabPane tab="Usage Logs" key="3">
+          <Row gutter={16} className="filter-row">
+            <Col xs={24} md={12} lg={8}>
+              <Input.Search placeholder="Search User" onSearch={(value) => console.log(value)} enterButton />
+            </Col>
+            <Col xs={24} md={12} lg={8}>
+              <RangePicker
+                style={{ width: '100%' }}
+                onChange={(dates, dateStrings) => console.log(dates, dateStrings)}
+              />
+            </Col>
+            <Col xs={24} md={12} lg={4}>
+              <Button type="primary" block onClick={() => console.log('Filter clicked')}>
+                Filter
+              </Button>
+            </Col>
+            <Col xs={24} md={12} lg={4} className="download-button-col">
+              <Button type="default" block onClick={() => console.log('Download clicked')}>
+                Download
+              </Button>
+            </Col>
+          </Row>
           <Row gutter={16}>
               <Col xs={24} md={24}>
                 <Table
                   className="custom-table-header"
                   columns={[
-                    { title: 'User', dataIndex: 'user', key: 'user', width: 200 },
-                    { title: 'Action', dataIndex: 'action', key: 'action', width: 150 },
-                    { title: 'Date', dataIndex: 'date', key: 'date', width: 150 },
-                    { title: 'Details', dataIndex: 'details', key: 'details', width: 300 },
+                    { title: 'Date', dataIndex: 'date', key: 'date'},
+                    { title: 'Time', dataIndex: 'time', key: 'time'},
+                    { title: 'Username', dataIndex: 'username', key: 'username', width : 200},
+                    { title: 'User Role', dataIndex: 'role', key: 'role'},
+                    { title: 'Action', dataIndex: 'action', key: 'action'},
                   ]}
                   dataSource={[]}
                   pagination={{ pageSize: 10 }}

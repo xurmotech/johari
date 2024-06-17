@@ -289,47 +289,51 @@ const getPreviousMonth = () => {
 };
 
 const JohariTab = () => {
-  const defaultMonth = getPreviousMonth();
-  const [selectedMonth, setSelectedMonth] = useState(defaultMonth);
-  const [columns, setColumns] = useState(initialColumns);
-
-  const handleMonthChange = (date, dateString) => {
-    if (dateString) {
-      const newMonth = moment(dateString, 'YYYY-MM').format("MMM'YY");
-      setSelectedMonth(newMonth);
-    }
-  };
-
-  useEffect(() => {
-        const year = parseInt(selectedMonth.split("'")[1], 10);
-        const previousYear = `${year - 2}-${year - 1}`;
-    
-        const updatedColumns = initialColumns.map(column => ({
-          ...column,
-          children: column.children.map(subcolumn => {
-            if (subcolumn.title === '22-23') {
-              return {
-                ...subcolumn,
-                title: previousYear,
-              };
-            }
-            if (subcolumn.title === "" || subcolumn.title.includes("'")) {
-              return {
-                ...subcolumn,
-                title: selectedMonth,
-                children: subcolumn.children.map(subsubcolumn => ({
-                  ...subsubcolumn,
-                  key: subsubcolumn.key.replace('dynamic', selectedMonth.toLowerCase().replace('\'', '_')),
-                  dataIndex: subsubcolumn.key.replace('dynamic', selectedMonth.toLowerCase().replace('\'', '_')),
-                })),
-              };
-            }
-            return subcolumn;
-          }),
-        }));
-    
-        setColumns(updatedColumns);
+        const defaultMonth = getPreviousMonth();
+        const [selectedMonth, setSelectedMonth] = useState(defaultMonth);
+        const [columns, setColumns] = useState(initialColumns);
+      
+        const handleMonthChange = (date, dateString) => {
+          if (dateString) {
+            const newMonth = moment(dateString, 'YYYY-MM').format("MMM'YY");
+            setSelectedMonth(newMonth);
+          }
+        };
+      
+        useEffect(() => {
+          const year = parseInt(selectedMonth.split("'")[1], 10);
+          const previousYear = `${year - 2}-${year - 1}`;
+      
+          const updatedColumns = initialColumns.map(column => ({
+            ...column,
+            children: column.children.map(subcolumn => ({
+              ...subcolumn,
+              children: subcolumn.children.map(subsubcolumn => {
+                if (subsubcolumn.title === '22-23') {
+                  return {
+                    ...subsubcolumn,
+                    title: previousYear,
+                  };
+                }
+                if (subsubcolumn.title === "" || subsubcolumn.title.includes("'")) {
+                  return {
+                    ...subsubcolumn,
+                    title: selectedMonth,
+                    children: subsubcolumn.children.map(subsubsubcolumn => ({
+                      ...subsubsubcolumn,
+                      key: subsubsubcolumn.key.replace('dynamic', selectedMonth.toLowerCase().replace('\'', '_')),
+                      dataIndex: subsubsubcolumn.key.replace('dynamic', selectedMonth.toLowerCase().replace('\'', '_')),
+                    })),
+                  };
+                }
+                return subsubcolumn;
+              }),
+            })),
+          }));
+      
+          setColumns(updatedColumns);
         }, [selectedMonth]);
+      
 
 return (
         <div style={{ padding: '20px' }}>

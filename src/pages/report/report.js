@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Form, Button, Select, Table, Row, Col } from 'antd';
 import MonthDropdown from '../../components/common/dropdowns/monthselect';
 import './report.css';
+import DownloadButton from '../../components/common/downloadButton';
+import {dataMappings} from '../../components/common/downloadDataMapping';
 
 const { Option } = Select;
 
@@ -126,7 +128,7 @@ const Townwise = () => {
           </Col>
           <Col span={8}>
             <Form.Item>
-              <Button type="primary" htmlType="submit">
+              <Button type="primary" className="primary-button" htmlType="submit">
                 Generate Preview
               </Button>
             </Form.Item>
@@ -140,9 +142,11 @@ const Townwise = () => {
         </div>
         <Table dataSource={data} columns={columns} pagination={false} scroll={{ x: 'max-content' }}/>
         <div className="export-button">
-          <Button type="primary" onClick={() => console.log('Exporting to Excel')}>
-            Download
-          </Button>
+              <DownloadButton
+                style={{width:'11%'}}
+                data={dataMappings['Report']} // Pass the entire data object
+                buttonText="Download"
+              />
         </div>
         </>
       )}

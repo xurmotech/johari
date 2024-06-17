@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Table, Button, Row, Col } from 'antd';
 import MonthDropdown from '../../components/common/dropdowns/monthselect';
 import './approve.css';
+import DownloadButton from '../../components/common/downloadButton';
+import {dataMappings} from '../../components/common/downloadDataMapping';
 
 
 // Sample data for the table
@@ -53,7 +55,10 @@ const Approve = () => {
       <footer>
         <Row justify="space-between" gutter = {16} align="middle" style={{ marginTop: '20px' }}>
         <Col xs={24} sm={12} md={8} lg={6} xl={4} className="left-button">
-                <Button type="default">Download File</Button>
+        <DownloadButton
+          data={dataMappings['Usage']} // Pass the entire data object
+          buttonText="Download"
+        />
         </Col>
         <Col xs={24} sm={12} md={8} lg={6} xl={4} className="right-buttons">
                 <Col>

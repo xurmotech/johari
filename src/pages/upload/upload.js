@@ -5,6 +5,8 @@ import { useAuth } from '../../components/authContext';
 import MonthDropdown from '../../components/common/dropdowns/monthselect';
 import CountryDropdown from '../../components/common/dropdowns/countryselect';
 import * as XLSX from 'xlsx';
+import DownloadButton from '../../components/common/downloadButton';
+import {dataMappings} from '../../components/common/downloadDataMapping';
 
 const { Title } = Typography;
 
@@ -134,12 +136,11 @@ const Upload = () => {
               <Col xs={24} sm={12} md={6} className="help-container">
                 <div>
                   <span className="help-text">Help:
-                    <Button
-                      onClick={downloadTemplate}
-                      className="help-button"
-                    >
-                      Download Template
-                    </Button>
+                       <DownloadButton  
+                        style={{width:'45%'}}
+                        data={dataMappings['Download Template']} // Pass the entire data object
+                        buttonText="Download Template"
+                      />
                   </span>
                 </div>
                 <div className="last-updated">
@@ -203,12 +204,11 @@ const Upload = () => {
                 <Col xs={24} sm={12} md={8} className="help-container">
                     <div>
                       <span className="help-text">Help:
-                        <Button
-                          onClick={downloadTemplate}
-                          className="help-button"
-                        >
-                          Download Template
-                        </Button>
+                       <DownloadButton          
+                        style={{width:'45%'}}
+                        data={dataMappings['Download Template']} // Pass the entire data object
+                        buttonText="Download Template"
+                      />
                       </span>
                     </div>
                     <div className="last-updated">

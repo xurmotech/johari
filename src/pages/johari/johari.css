@@ -1,0 +1,33 @@
+.ind-column {
+        background-color: #bae9e9;
+      }
+
+
+      .tvs-column{
+        background-color: #bdf3c1;
+      }
+      
+      .ms-column {
+        background-color: #eec19c;
+      }
+.country-row {
+        color: #1E3D88;
+        margin-bottom: 10px;
+}
+
+.month-header {
+        display: flex;
+        color:#1E3D88;
+        font-weight: bold;
+        margin-bottom: 5px;
+}
+
+/* Hide the table headers */
+.top-row .ant-table-thead {
+        display: none;
+       
+      }
+
+.top-row {
+        margin-bottom : 10px;
+}

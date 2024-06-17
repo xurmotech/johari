@@ -9,6 +9,7 @@ import Approve from '../../../pages/approve/approve'
 import Admin from '../../../pages/admin/admin'
 import Status from '../../../pages/status/status'
 import Townwise from '../../../pages/report/report';
+import Johari from '../../../pages/johari/johari';
 
 const { Title } = Typography;
 const { TabPane } = Tabs;
@@ -70,7 +71,7 @@ return (
               <Townwise />
             </TabPane>
             <TabPane tab="Johari" key="5">
-              {/* Content for Townwise tab */}
+              <Johari />
             </TabPane>
             <TabPane tab="Administration" key="6">
               <Admin />

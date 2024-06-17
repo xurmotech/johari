@@ -2,7 +2,7 @@ import React from 'react';
 import { Form, DatePicker } from 'antd';
 import moment from 'moment';
 
-const MonthDropdown = () => {
+const MonthDropdown = ({ onMonthChange }) => {
   const disabledDate = (current) => {
     // Disable future months
     return current && current > moment().endOf('month');
@@ -10,7 +10,7 @@ const MonthDropdown = () => {
 
   return (
     <Form.Item name="month" label="Month" rules={[{ required: true, message: 'Please select a month' }]}>
-      <DatePicker picker="month" disabledDate={disabledDate} />
+      <DatePicker picker="month" disabledDate={disabledDate} onChange={onMonthChange}/>
     </Form.Item>
   );
 };

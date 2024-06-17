@@ -5,6 +5,8 @@ import './status.css';
 import CountryDropdown from '../../components/common/dropdowns/countryselect';
 import * as XLSX from 'xlsx';
 import { DownloadOutlined } from '@ant-design/icons';
+import DownloadButton from '../../components/common/downloadButton';
+import {dataMappings} from '../../components/common/downloadDataMapping';
 
 const { TabPane } = Tabs;
 const { Option } = Select;
@@ -173,9 +175,20 @@ const Status = () => {
           </div>
         ))
          : (
-          <Button key="submit" type="primary"  className="primary-button" onClick={downloadTemplate}>
-            Download Excel
-          </Button>
+          // <Button key="submit" type="primary"  className="primary-button" onClick={downloadTemplate}>
+          //   Download Excel
+          // </Button>
+        //   <DownloadButton
+        //   fileName={dataMappings['Consolidated Townwise data'].fileName}
+        //   headers={dataMappings['Consolidated Townwise data'].headers}
+        //   data={dataMappings['Consolidated Townwise data'].data}
+        //   buttonText="Download Excel"
+        // />
+        <DownloadButton  
+           style={{width:'40%'}}
+            data={dataMappings['Consolidated Townwise data']} // Pass the entire data object
+            buttonText="Download Excel"
+          />
         )}
         
       </Modal>

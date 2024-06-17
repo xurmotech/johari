@@ -42,7 +42,7 @@
 
       .table-header {
         display: flex;
-        justify-content: flex-end;
+        /* justify-content: flex-end; */
         margin-bottom: 10px;
       }
       
@@ -83,6 +83,11 @@
           table-layout: fixed;
           width: 100%;
         }
+      }
+
+      .filter-row {
+        display: flex;
+        margin-bottom: 10px;
       }
       
       .table-container {
